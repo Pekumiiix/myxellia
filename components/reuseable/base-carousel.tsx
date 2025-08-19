@@ -51,7 +51,7 @@ export function BaseCarousel({ item }: { item: IBaseCarousel[] }) {
               key={data.title}
               className='w-full min-h-full rounded-xl overflow-hidden'
             >
-              <div className='w-full h-[286px]'>
+              <div className='w-full h-[286px] rounded-xl bg-gradient-to-b from-black/5 to-black/60'>
                 <Image
                   src={data.src}
                   alt={data.alt}
