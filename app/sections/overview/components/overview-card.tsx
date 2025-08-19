@@ -1,5 +1,5 @@
 import { ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 import { RenderIcon, type TIcon } from '@/utils/render-icon';
 import { CardWrapper } from './card-wrapper';
 
@@ -12,13 +12,13 @@ export function OverviewCard({ name, icon, stats }: IOverViewProps) {
           <p className='text-sm font-medium text-gray-800'>{name}</p>
         </div>
 
-        <Button
-          variant='ghost'
+        <Link
+          href='#'
           className='flex items-center gap-0.5 text-blue textxs font-medium leading-[100%]'
         >
           <span>View all</span>
           <ChevronRight size={18} />
-        </Button>
+        </Link>
       </div>
       <div className='w-full flex items-center justify-between px-4 pt-5 pb-4'>
         {stats.map((item) => (
