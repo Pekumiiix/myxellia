@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input, InputWrapper } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
 import { navLink } from '@/mock-data';
-import { RenderIcon, type TIcon } from '@/utils/render-icon';
+import Image from 'next/image';
 
 export function NavBar() {
   const pathname = usePathname();
@@ -52,7 +52,7 @@ function NavLinks({ href, icon, name, isActive }: INavLinkProps & { isActive: bo
       asChild
       variant='ghost'
       className={cn(
-        'w-fit flex items-center gap-2 text-sm leading-[100%] rounded-[8px] py-[7px] px-[33px]',
+        'w-fit flex items-center gap-2 text-sm leading-[100%] rounded-[8px] py-[7px] !px-[33px]',
         {
           'bg-accent text-foreground font-semibold': isActive,
           'text-deep-grey hover:bg-accent font-normal': !isActive,
@@ -60,7 +60,7 @@ function NavLinks({ href, icon, name, isActive }: INavLinkProps & { isActive: bo
       )}
     >
       <Link href={href}>
-        {RenderIcon(icon, '#3D3D3D', 2.5)}
+        <Image src={icon.src} alt={icon.alt} width={24} height={24} />
         <p>{name}</p>
       </Link>
     </Button>
@@ -69,6 +69,6 @@ function NavLinks({ href, icon, name, isActive }: INavLinkProps & { isActive: bo
 
 export interface INavLinkProps {
   href: string;
-  icon: TIcon;
+  icon: {src: string, alt: string};
   name: string;
 }

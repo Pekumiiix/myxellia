@@ -54,17 +54,17 @@ export function CalendarComponent() {
               key={`${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`}
               className='flex h-full border-l border-b border-border p-1.5'
             >
-              <Button
+              <p
                 className={cn(
-                  'h-fit !w-fit text-[10px] capitalize leading-[100%] text-muted-foreground font-inter font-medium transition-all duration-200 hover:bg-gray-800',
+                  'text-[10px] capitalize text-muted-foreground font-inter font-medium transition-all duration-200 hover:bg-gray-800',
                   {
-                    'bg-blue-600 text-white hover:bg-blue-700 py-2 px-2.5 rounded-full': isToday,
+                    'bg-blue-600 text-white hover:bg-blue-700 text-center w-7 h-4 rounded-full': isToday,
                     'p-0 hover:text-white bg-transparent': !isToday,
                   },
                 )}
               >
                 {isFirstOfTheMonth && months[date.getMonth()].slice(0, 3)} {date.getDate()}
-              </Button>
+              </p>
             </div>
           );
         })}

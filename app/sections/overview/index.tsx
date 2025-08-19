@@ -1,4 +1,3 @@
-import { ProfileIcon } from '@/components/icons/profile';
 import { OverviewCard } from './components/overview-card';
 import { SalesOverview } from './sales-overview';
 
@@ -18,7 +17,7 @@ export default function OverviewSection() {
           ]}
         />
         <OverviewCard
-          icon={ProfileIcon}
+          icon={{src: "/assets/main/profile.png", alt:"User"}}
           name='Users Overview'
           stats={[
             { title: 'Total', value: '20.7k' },

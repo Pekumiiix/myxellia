@@ -1,14 +1,14 @@
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
-import { RenderIcon, type TIcon } from '@/utils/render-icon';
 import { CardWrapper } from './card-wrapper';
+import Image from 'next/image';
 
 export function OverviewCard({ name, icon, stats }: IOverViewProps) {
   return (
     <CardWrapper>
       <div className='w-full flex items-center justify-between px-4 py-[13px] bg-[#F9FAFB] rounded-t-2xl'>
         <div className='flex items-center gap-2.5'>
-          {RenderIcon(icon)}
+          <Image src={icon.src} alt={icon.alt} width={24} height={24} />
           <p className='text-sm font-medium text-gray-800'>{name}</p>
         </div>
 
@@ -48,6 +48,6 @@ interface IStats {
 
 interface IOverViewProps {
   name: string;
-  icon: TIcon;
+  icon: {src: string, alt: string};
   stats: IStats[];
 }

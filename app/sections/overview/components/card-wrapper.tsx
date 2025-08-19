@@ -8,7 +8,7 @@ export function CardWrapper({
   className?: string;
 }) {
   return (
-    <div className={cn('flex flex-col rounded-2xl border border-card-stroke', className)}>
+    <div className={cn('flex flex-col rounded-2xl border border-card-stroke bg-white', className)}>
       {children}
     </div>
   );

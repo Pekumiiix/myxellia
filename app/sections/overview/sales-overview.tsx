@@ -27,7 +27,7 @@ export function SalesOverview() {
 
             <Button
               variant='outline'
-              className='w-[177px] h-[46px] text-xs font-medium !border-gray-300 rounded-full'
+              className='w-[177px] h-[46px] text-xs font-medium !border-gray-300 rounded-full shadow-none'
             >
               View Transactions
             </Button>
@@ -134,7 +134,7 @@ function SalesChart() {
           data={chartData}
           chartProps={{ barSize: 4, margin: { left: -30, bottom: -15 }, width: 350 }}
           classNames={{
-            container: 'min-h-[200px] min-w-[350px]',
+            container: 'h-[160px] min-w-[350px]',
             axis: 'text-[10px] font-medium leading-[100%] text-semi-grey',
           }}
           Yaxis={{

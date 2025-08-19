@@ -1,4 +1,3 @@
-import { ProfileIcon } from '@/components/icons/profile';
 import type { IBaseCarousel } from '@/components/reuseable/base-carousel';
 import type { ChartConfig } from '@/components/ui/chart';
 import type { INavLinkProps } from '../app/sections/header/nav';
@@ -129,7 +128,7 @@ export const navLink: INavLinkProps[] = [
     icon: { src: '/assets/header/listing.png', alt: 'Listing' },
     name: 'Listing',
   },
-  { href: '/users', icon: ProfileIcon, name: 'Users' },
+  { href: '/users', icon: {src: "/assets/header/users.png", alt: "User"}, name: 'Users' },
   {
     href: '/request',
     icon: { src: '/assets/header/request.png', alt: 'request' },
