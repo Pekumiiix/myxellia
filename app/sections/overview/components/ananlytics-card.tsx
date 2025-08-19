@@ -1,3 +1,4 @@
+import { FormatNumber } from '@chakra-ui/react';
 import { TrendIcon } from '@/components/icons/trend';
 import { cn } from '@/lib/utils';
 import { CardWrapper } from './card-wrapper';
@@ -29,7 +30,14 @@ export function AnalyticsCard({ amount, title, percentageChange, trend }: IAnaly
               'rotate-180': trend !== 'up' && trend !== 'moderate-up',
             })}
           />
-          <p className='text-[10px] text-inherit leading-[100%]'>{percentageChange}%</p>
+          <p className='text-[10px] text-inherit leading-[100%]'>
+            <FormatNumber
+              value={percentageChange}
+              style='percent'
+              maximumFractionDigits={1}
+              minimumFractionDigits={1}
+            />
+          </p>
         </div>
       </div>
     </CardWrapper>

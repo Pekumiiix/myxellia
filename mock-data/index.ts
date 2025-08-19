@@ -34,10 +34,15 @@ export const chartData = [
 ];
 
 export const data: IAnalytics[] = [
-  { amount: 120000000, title: 'Total inflow', trend: 'up', percentageChange: 2.5 },
-  { amount: 50000000, title: 'MRR', trend: 'moderate-up', percentageChange: 2.5 },
-  { amount: 200000000, title: 'Commission Revenue', trend: 'moderate-down', percentageChange: 2.5 },
-  { amount: 500000000, title: 'GMV', trend: 'down', percentageChange: 2.5 },
+  { amount: 120000000, title: 'Total inflow', trend: 'up', percentageChange: 0.025 },
+  { amount: 50000000, title: 'MRR', trend: 'moderate-up', percentageChange: 0.025 },
+  {
+    amount: 200000000,
+    title: 'Commission Revenue',
+    trend: 'moderate-down',
+    percentageChange: 0.025,
+  },
+  { amount: 500000000, title: 'GMV', trend: 'down', percentageChange: 0.025 },
 ];
 
 export const firstCarouselData: IBaseCarousel[] = [
@@ -128,7 +133,7 @@ export const navLink: INavLinkProps[] = [
     icon: { src: '/assets/header/listing.png', alt: 'Listing' },
     name: 'Listing',
   },
-  { href: '/users', icon: {src: "/assets/header/users.png", alt: "User"}, name: 'Users' },
+  { href: '/users', icon: { src: '/assets/header/users.png', alt: 'User' }, name: 'Users' },
   {
     href: '/request',
     icon: { src: '/assets/header/request.png', alt: 'request' },

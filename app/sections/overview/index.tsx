@@ -11,18 +11,18 @@ export default function OverviewSection() {
           icon={{ src: '/assets/main/home.png', alt: 'Home' }}
           name='Listings Overview'
           stats={[
-            { title: 'Total', value: '1.8k' },
-            { title: 'Active', value: '80' },
-            { title: 'Archive', value: '1k' },
+            { title: 'Total', value: 1800 },
+            { title: 'Active', value: 80 },
+            { title: 'Archive', value: 1000 },
           ]}
         />
         <OverviewCard
-          icon={{src: "/assets/main/profile.png", alt:"User"}}
+          icon={{ src: '/assets/main/profile.png', alt: 'User' }}
           name='Users Overview'
           stats={[
-            { title: 'Total', value: '20.7k' },
-            { title: 'Riders', value: '8.5k' },
-            { title: 'Subscribers', value: '7.5k' },
+            { title: 'Total', value: 20700 },
+            { title: 'Riders', value: 8500 },
+            { title: 'Subscribers', value: 7500 },
           ]}
         />
       </div>
