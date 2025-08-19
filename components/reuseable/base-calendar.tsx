@@ -17,7 +17,7 @@ export function CalendarComponent() {
   const days = getDaysInMonth(currentDate);
 
   return (
-    <div className='min-h-[70vh] flex flex-col items-center px-[25px]'>
+    <div className='min-h-[75vh] flex flex-col items-center px-[25px]'>
       <div className='w-fit flex items-center gap-[29px] mb-6'>
         <ToogleButton
           action={() => navigateMonth(-1)}
