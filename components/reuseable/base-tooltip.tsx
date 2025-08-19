@@ -5,22 +5,26 @@ export function BaseTooltip({
   trigger,
   children,
   variant = 'black',
-  className,
   action,
+  classNames,
 }: IBaseTooltip) {
   return (
     <Tooltip>
       <TooltipTrigger
         onClick={action}
-        className={className}
+        className={classNames?.trigger}
       >
         {trigger}
       </TooltipTrigger>
       <TooltipContent
-        className={cn('flex flex-col gap-1.5', {
-          'bg-grey-900 text-[10px] text-white leading-[150%] tracking-[3%]': variant === 'black',
-          'bg-gray-300': variant === 'grey',
-        })}
+        className={cn(
+          'flex flex-col gap-1.5',
+          {
+            'bg-grey-900 text-[10px] text-white leading-[150%] tracking-[3%]': variant === 'black',
+            'bg-gray-300': variant === 'grey',
+          },
+          classNames?.content,
+        )}
       >
         {children}
       </TooltipContent>
@@ -32,6 +36,6 @@ interface IBaseTooltip {
   trigger: React.ReactNode;
   children?: React.ReactNode;
   variant?: 'black' | 'grey';
-  className?: string;
   action?: () => void;
+  classNames?: { trigger?: string; content?: string };
 }

@@ -4,7 +4,7 @@ import OverviewSection from './sections/overview';
 
 export default function Home() {
   return (
-    <section className='max-w-[1536px] w-full flex flex-col gap-4 py-3 px-[78px]'>
+    <section className='max-w-[1536px] w-full bg-[#fbfdfc] flex flex-col gap-4 py-3 px-[78px]'>
       <p className='text-xl font-semibold leading-[100%]'>Welcome, Ahmed</p>
 
       <OverviewSection />

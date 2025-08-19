@@ -27,7 +27,7 @@ export function BasebarChartWrapper({
         <XAxis
           {...Xaxis}
           tickLine={false}
-          axisLine={true}
+          axisLine={false}
           className={classNames.axis}
         />
         <YAxis

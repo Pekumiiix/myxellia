@@ -1,5 +1,6 @@
 'use client';
 
+import Autoplay from 'embla-carousel-autoplay';
 import { Dot } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -38,6 +39,11 @@ export function BaseCarousel({ item }: { item: IBaseCarousel[] }) {
           align: 'start',
           loop: true,
         }}
+        plugins={[
+          Autoplay({
+            delay: 2000,
+          }),
+        ]}
       >
         <CarouselContent className='h-full'>
           {item.map((data) => (
@@ -51,7 +57,7 @@ export function BaseCarousel({ item }: { item: IBaseCarousel[] }) {
                   alt={data.alt}
                   width={418}
                   height={286}
-                  className='rounded-xl w-full min-h-full bg-red-900'
+                  className='rounded-xl w-full min-h-full'
                 />
               </div>
             </CarouselItem>

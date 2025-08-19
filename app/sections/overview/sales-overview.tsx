@@ -11,7 +11,7 @@ import { AnalyticsCard } from './components/ananlytics-card';
 import { CardWrapper } from './components/card-wrapper';
 
 export function SalesOverview() {
-  const [filter, setFilter] = useState<string>('');
+  const [filter, setFilter] = useState<string>('1 year');
 
   return (
     <CardWrapper className='col-span-2'>

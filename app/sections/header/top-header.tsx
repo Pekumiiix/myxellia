@@ -50,7 +50,11 @@ export function TopHeader() {
             />
           </div>
 
-          <ProfileButton action={() => setPopoverOpen(true)} />
+          <ProfilePopover
+            open={popoverOpen}
+            setOpen={setPopoverOpen}
+            trigger={<ProfileButton open={popoverOpen} />}
+          />
         </div>
 
         <BudgetDialog
@@ -60,10 +64,6 @@ export function TopHeader() {
         <CalendarSheet
           open={sheetOpen}
           setOpen={setSheetOpen}
-        />
-        <ProfilePopover
-          open={popoverOpen}
-          setOpen={setPopoverOpen}
         />
       </div>
     </div>
@@ -90,7 +90,7 @@ function MenuButton({ src, alt, action }: IMenuButtons) {
 function ActionMenuButtons({ src, alt, action, text }: IActionMenuButtonProps) {
   return (
     <BaseTooltip
-      className='size-8'
+      classNames={{ trigger: 'size-8' }}
       action={action}
       trigger={
         <Image
@@ -106,18 +106,23 @@ function ActionMenuButtons({ src, alt, action, text }: IActionMenuButtonProps) {
   );
 }
 
-function ProfileButton({ action }: { action: () => void }) {
+function ProfileButton({ open }: { open: boolean }) {
   return (
     <BaseTooltip
-      className='size-10 flex items-center justify-center rounded-full bg-background text-[23px] font-medium leading-[130%] text-black hover:bg-background/90'
+      classNames={{
+        trigger:
+          'size-10 flex items-center justify-center rounded-full bg-background text-[23px] font-medium leading-[130%] text-black hover:bg-background/90',
+        content: open ? 'hidden' : 'flex',
+      }}
       trigger='A'
       variant='grey'
-      action={action}
     >
-      <div className='flex flex-col text-foreground gap-1'>
-        <p className='text-base font-medium'>Amao Pelumi</p>
-        <p className='text-sm text-foreground/80'>Amaopelumi69@gmail.com</p>
-      </div>
+      {!open && (
+        <div className='flex flex-col text-foreground gap-1'>
+          <p className='text-base font-medium'>Amao Pelumi</p>
+          <p className='text-sm text-foreground/80'>Amaopelumi69@gmail.com</p>
+        </div>
+      )}
     </BaseTooltip>
   );
 }
