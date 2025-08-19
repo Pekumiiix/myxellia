@@ -1,13 +1,13 @@
 'use client';
 
 import { Search } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input, InputWrapper } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
 import { navLink } from '@/mock-data';
-import Image from 'next/image';
 
 export function NavBar() {
   const pathname = usePathname();
@@ -60,7 +60,12 @@ function NavLinks({ href, icon, name, isActive }: INavLinkProps & { isActive: bo
       )}
     >
       <Link href={href}>
-        <Image src={icon.src} alt={icon.alt} width={24} height={24} />
+        <Image
+          src={icon.src}
+          alt={icon.alt}
+          width={24}
+          height={24}
+        />
         <p>{name}</p>
       </Link>
     </Button>
@@ -69,6 +74,6 @@ function NavLinks({ href, icon, name, isActive }: INavLinkProps & { isActive: bo
 
 export interface INavLinkProps {
   href: string;
-  icon: {src: string, alt: string};
+  icon: { src: string; alt: string };
   name: string;
 }

@@ -127,21 +127,21 @@ export const thirdCarouselData: IBaseCarousel[] = [
 ];
 
 export const navLink: INavLinkProps[] = [
-  { href: '/', icon: { src: '/assets/header/dashboard.png', alt: 'dashboard' }, name: 'Dashboard' },
+  { href: '/', icon: { src: '/assets/header/dashboard.png', alt: 'Home' }, name: 'Dashboard' },
   {
     href: '/listing',
-    icon: { src: '/assets/header/listing.png', alt: 'Listing' },
+    icon: { src: '/assets/header/listing.png', alt: 'Case' },
     name: 'Listing',
   },
   { href: '/users', icon: { src: '/assets/header/users.png', alt: 'User' }, name: 'Users' },
   {
     href: '/request',
-    icon: { src: '/assets/header/request.png', alt: 'request' },
+    icon: { src: '/assets/header/request.png', alt: 'Paper' },
     name: 'Request',
   },
   {
     href: '/applications',
-    icon: { src: '/assets/header/application.png', alt: 'application' },
+    icon: { src: '/assets/header/application.png', alt: 'List' },
     name: 'Applications',
   },
 ];
